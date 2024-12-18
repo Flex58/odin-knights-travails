@@ -2,6 +2,7 @@ const node = (coord, previous = null, steps = 0) => {
     return {
         coord: coord,
         steps: steps,
+        //consider changin previous rather to array of all moves before this one
         previous: previous
     }
 }
@@ -18,6 +19,7 @@ const getMoves = (start, end) => {
 
     let queue = [node(start)]
     let steps = 0;
+    //change array to set if possible
     let visited = new Array()
     
     while (queue[0]) {
